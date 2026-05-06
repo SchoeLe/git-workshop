@@ -213,6 +213,7 @@ Ready? Let's go!
 # adding to staging area
 
 Let's look at `git status` quickly:
+
 ![](attachments/gitstatusnotstaged.png)
 
 Aha! There are changes `not staged for commit`. So let's stage them!
@@ -307,6 +308,7 @@ We now create a branch by running this command:
 git checkout -b adele_is_also_cool
 ```
 
+Now, run `git status` to verify that you're on the new branch.
 
 ---
 # creating a new file and committing it
@@ -335,7 +337,9 @@ Remember what `checkout` means? It gives you the state of all files of a particu
 
 Well, Adele is gone! The file `adele.txt` **only** exists on the `adele_is_also_cool` branch, not on the `main` branch! You see that the two branches are separate states of the code! So now you can imagine how two people can work on quite different stuff at the same time without interfering with one another.
 
-How do we get Adele next to the main branch?
+Using `git checkout main` and `git checkout adele_is_also_cool` you can switch between the branches, and see the `adele.txt` file disappear and come back again. Pro-hacker tip: `git checkout -` bring you to the last branch you were on.
+
+But now, how do we get Adele into the main branch?
 
 With another core concept of `git`: **merging**
 
@@ -354,8 +358,10 @@ This merges the content of the `adele_is_also_cool` into the `main` branch. The 
 ![](attachments/commits_main_adele_merged.png)
 
 
-Check out `git log`! A new commit was added! A so-called **merge commit**. TODO
+Check out `git log`! A new commit was added! A so-called **merge commit**.
+
 Check out `git status`! We're still on the `main` branch!
+
 Check out the files! Both `workshopfile.txt` and `adele.txt` are there!
 
 
@@ -380,6 +386,8 @@ Adding a file in a different branch is a simple situation. Where it gets interes
 The repository looks something like this (I ignored the previous merging of the Adele branch):
 
 ![](attachments/commits_main_adele_britney.png)
+
+You can again switch between the branches `main` and `britney` and see the content of the file change! Just like previously, when the file appeared and disappeared, depending on the branch.
 
 ---
 
@@ -508,9 +516,9 @@ Whenever you have new code committed, and it's backed up!
 
 # final remarks
 
-- There are many more features to git, but these are the most important ones
-- As a best practice, commit often! That makes is easy to find buts, and ensures that everything is backed up
+- There are many more features to git, but these are the most important ones, the one that you should definitely know in addition is `git revert`
+- As a best practice, commit often and in logical steps, don't just always add all changes! That makes is easy to find buts, and ensures that everything is backed up timely.
 - Set up git in your IDE (RStudio etc.)
 - If you'd like more workshops like this, please go to my website, we offer such courses for many topics for scientific groups: https://www.konstantin-gregor.com
+- Our recent paper has tips on other great tools that can help make code better: https://gmd.copernicus.org/articles/19/2407/2026/
 - If you need a break, please also check out my science parody youtube channel: https://www.youtube.com/@scienceparodysongs
-- 

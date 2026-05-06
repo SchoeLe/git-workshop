@@ -522,3 +522,5 @@ Whenever you have new code committed, and it's backed up!
 - If you'd like more workshops like this, please go to my website, we offer such courses for many topics for scientific groups: https://www.konstantin-gregor.com
 - Our recent paper has tips on other great tools that can help make code better: https://gmd.copernicus.org/articles/19/2407/2026/
 - If you need a break, please also check out my science parody youtube channel: https://www.youtube.com/@scienceparodysongs
+
+![](attachments/qrs.png)
